@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{4F438820-CC03-4332-8C50-CC766D3C08D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{6F130744-E9DD-472E-8271-0C46D477C127}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlServerDataAccess", "SqlServerDataAccess\SqlServerDataAccess.csproj", "{152239A9-4AB5-4CFE-A939-4FDB0588FD12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{4F438820-CC03-4332-8C50-CC766D3C08D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F438820-CC03-4332-8C50-CC766D3C08D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F438820-CC03-4332-8C50-CC766D3C08D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F130744-E9DD-472E-8271-0C46D477C127}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F130744-E9DD-472E-8271-0C46D477C127}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F130744-E9DD-472E-8271-0C46D477C127}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F130744-E9DD-472E-8271-0C46D477C127}.Release|Any CPU.Build.0 = Release|Any CPU
+		{152239A9-4AB5-4CFE-A939-4FDB0588FD12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{152239A9-4AB5-4CFE-A939-4FDB0588FD12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{152239A9-4AB5-4CFE-A939-4FDB0588FD12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{152239A9-4AB5-4CFE-A939-4FDB0588FD12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
