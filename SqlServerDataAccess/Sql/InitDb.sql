@@ -1,4 +1,6 @@
-﻿CREATE SCHEMA Chatter;
+﻿-- Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;
+
+CREATE SCHEMA Chatter;
 GO
 
 CREATE TABLE [Chatter].[User]
@@ -8,6 +10,7 @@ CREATE TABLE [Chatter].[User]
     CreateUserId        INT NULL,
     CreateDate          DATETIME2 NOT NULL,
     PasswordHash        NVARCHAR(64) NOT NULL,
+    PasswordSalt        NVARCHAR(64) NOT NULL,
     Email               NVARCHAR(100) NOT NULL,
     VerificationCode    NVARCHAR(16) NOT NULL,
     VerificationDate    DATETIME2 NULL,
@@ -17,10 +20,10 @@ CREATE TABLE [Chatter].[User]
     CONSTRAINT User_Pk PRIMARY KEY CLUSTERED (Id),
 
     CONSTRAINT User_FK1 FOREIGN KEY (CreateUserId)
-        REFERENCES [Chatter].[User].[Id],
+        REFERENCES [Chatter].[User] (Id),
 
     CONSTRAINT User_FK2 FOREIGN KEY (UpdateUserId)
-        REFERENCES [Chatter].[User].[Id]
+        REFERENCES [Chatter].[User] (Id)
 );
 
 CREATE TABLE [Chatter].[Post]
@@ -35,8 +38,8 @@ CREATE TABLE [Chatter].[Post]
     CONSTRAINT Post_Pk PRIMARY KEY CLUSTERED (Id),
 
     CONSTRAINT Post_FK1 FOREIGN KEY (CreateUserId)
-        REFERENCES [Chatter].[User].[Id],
+        REFERENCES [Chatter].[User] (Id),
 
     CONSTRAINT Post_FK2 FOREIGN KEY (UpdateUserId)
-        REFERENCES [Chatter].[User].[Id]
+        REFERENCES [Chatter].[User] (Id)
 );
